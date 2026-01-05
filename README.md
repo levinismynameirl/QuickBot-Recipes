@@ -250,10 +250,10 @@ See [PLUGIN_GUIDE.md](docs/PLUGIN_GUIDE.md) for details.
 
 ## 🔗 Links
 
-- [QuickBot Main Repository](https://github.com/quickbot/quickbot)
+- [QuickBot Main Repository](https://github.com/levinismynameirl/quick-bot)
 - [Plugin Development Guide](docs/PLUGIN_GUIDE.md)
-- [Submit a Plugin](https://github.com/quickbot/QuickBot-Recipes/pulls)
-- [Report an Issue](https://github.com/quickbot/QuickBot-Recipes/issues)
+- [Submit a Plugin](https://github.com/levinismynameirl/QuickBot-Recipes/pulls)
+- [Report an Issue](https://github.com/levinismynameirl/QuickBot-Recipes/issues)
 
 ---
 
