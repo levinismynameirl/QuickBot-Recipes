@@ -1,0 +1,16 @@
+# Registry Directory Placeholder
+# This file ensures the registry directories are included in version control.
+
+"""
+Registry Directory: A
+
+This directory contains plugin formulas for plugins starting with 'a'.
+Each formula is a Python file defining a PluginFormula subclass.
+
+Naming convention:
+    <plugin_name>.py
+
+Example:
+    awesome_plugin.py
+    automation_tools.py
+"""

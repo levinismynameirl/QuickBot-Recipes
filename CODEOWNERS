@@ -1,0 +1,28 @@
+# QuickBot-Recipes Code Owners
+# These owners will be the default owners for everything in the repo.
+# They will be requested for review when someone opens a pull request.
+
+# Global owners (for all files)
+* @quickbot/core-team
+
+# Registry formulas - require review from plugin team
+/registry/ @quickbot/plugin-team @quickbot/core-team
+
+# Abstract base classes - require core team approval
+/abstract/ @quickbot/core-team
+
+# Documentation - can be reviewed by docs team
+/docs/ @quickbot/docs-team @quickbot/core-team
+
+# GitHub configuration - core team only
+/.github/ @quickbot/core-team
+
+# CI/CD workflows - require core team approval
+/.github/workflows/ @quickbot/core-team @quickbot/devops-team
+
+# Aliases - require careful review
+/aliases/ @quickbot/core-team
+
+# Command scripts - core team only
+/cmd/ @quickbot/core-team
+/audit_exceptions/ @quickbot/core-team
