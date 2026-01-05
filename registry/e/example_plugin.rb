@@ -20,7 +20,7 @@ class ExamplePlugin < PluginFormula
 
   name "example_plugin"
   version "1.0.0"
-  desc "A minimal example plugin demonstrating QuickBot plugin structure"
+  desc "A minimal example plugin demonstrating QuickBot plugin structure. (Running the insallation for this plugin will not work as it is not linked to any active repository. This is just for demo"
   homepage "https://github.com/quickbot/example-plugin"
 
   # ─────────────────────────────────────────────────────────────────────────────
