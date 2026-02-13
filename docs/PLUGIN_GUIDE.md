@@ -2,7 +2,7 @@
 
 > Everything you need to build, test, and publish a QuickBot plugin.
 
-> **⚠️ Development Beta (v0.1.0d)** — QuickBot is in its first public release. The plugin API, hook events, context SDK, and formula format may change between development releases. Plugin authors should expect breaking changes until a stable v1.0 release.
+> **⚠️ Development Beta (v0.1.0.dev0)** — QuickBot is in its first public release. The plugin API, hook events, context SDK, and formula format may change between development releases. Plugin authors should expect breaking changes until a stable v1.0 release.
 
 ---
 
@@ -557,7 +557,7 @@ class BackupTool < PluginFormula
   categories  "backup", "utility", "automation"
 
   # ── Version constraints ─────────────────────────────────────────────
-  quickbot_version ">= 0.1.0d"
+  quickbot_version ">= 0.1.0.dev0"
   python_version   ">= 3.11"
 
   # ── Dependencies ────────────────────────────────────────────────────

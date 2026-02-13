@@ -52,7 +52,7 @@ class ExamplePlugin < PluginFormula
   # Version Requirements
   # ─────────────────────────────────────────────────────────────────────────────
 
-  quickbot_version ">= 0.1.0d"
+  quickbot_version ">= 0.1.0.dev0"
   python_version ">= 3.11"
 
   # ─────────────────────────────────────────────────────────────────────────────

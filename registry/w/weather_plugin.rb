@@ -15,7 +15,7 @@ class WeatherPlugin < PluginFormula
   plugin_type :command
   categories "utility", "weather"
 
-  quickbot_version ">= 0.1.0d"
+  quickbot_version ">= 0.1.0.dev0"
   python_version ">= 3.11"
   depends_on_python "requests >= 2.25.0"
 

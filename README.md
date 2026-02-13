@@ -7,7 +7,7 @@
 
 > The official plugin registry for [QuickBot](https://github.com/levinismynameirl/Quick-Bot) - a powerful macOS CLI automation tool.
 
-> **⚠️ Development Build (v0.1.0d)**
+> **⚠️ Development Build (v0.1.0.dev0)**
 > QuickBot is currently in **development beta**. This is the first public release. The plugin API, formula format, and registry structure may change between development releases. Plugin authors should expect breaking changes until a stable v1.0 release.
 
 ---
@@ -270,7 +270,7 @@ Individual plugins have their own licenses - check each plugin's source reposito
 
 ## Disclaimer
 
-QuickBot v0.1.0d is a **development beta** — the first public build. The plugin API, formula format, hooks system, and registry structure may change between development releases. Plugin authors should pin to specific QuickBot versions and expect breaking changes until a stable v1.0 release.
+QuickBot v0.1.0.dev0 is a **development beta** — the first public build. The plugin API, formula format, hooks system, and registry structure may change between development releases. Plugin authors should pin to specific QuickBot versions and expect breaking changes until a stable v1.0 release.
 
 ---
 
