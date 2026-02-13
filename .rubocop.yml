@@ -1,0 +1,100 @@
+# QuickBot-Recipes RuboCop Configuration
+# This file configures RuboCop for any Ruby formula files in the registry.
+
+require:
+  - rubocop-performance
+
+AllCops:
+  TargetRubyVersion: 3.0
+  NewCops: enable
+  Exclude:
+    - 'vendor/**/*'
+    - 'node_modules/**/*'
+    - '.git/**/*'
+
+# Layout
+Layout/LineLength:
+  Max: 120
+  AllowedPatterns:
+    - '^\s*#'  # Allow long comments
+    - 'url\s*='  # Allow long URLs
+    - 'sha256\s*='  # Allow long checksums
+
+Layout/EmptyLinesAroundClassBody:
+  Enabled: false
+
+Layout/EmptyLinesAroundModuleBody:
+  Enabled: false
+
+# Style
+Style/Documentation:
+  Enabled: false
+
+Style/FrozenStringLiteralComment:
+  Enabled: true
+  EnforcedStyle: always
+
+Style/StringLiterals:
+  EnforcedStyle: double_quotes
+
+Style/SymbolArray:
+  Enabled: false
+
+Style/WordArray:
+  Enabled: false
+
+Style/TrailingCommaInArrayLiteral:
+  EnforcedStyleForMultiline: comma
+
+Style/TrailingCommaInHashLiteral:
+  EnforcedStyleForMultiline: comma
+
+# Naming
+Naming/FileName:
+  Exclude:
+    - 'registry/**/*'  # Plugin names may not follow Ruby conventions
+
+Naming/MethodParameterName:
+  MinNameLength: 1
+
+# Metrics
+Metrics/MethodLength:
+  Max: 30
+  Exclude:
+    - 'registry/**/*'  # Allow longer install methods
+
+Metrics/ClassLength:
+  Max: 200
+  Exclude:
+    - 'registry/**/*'  # Formula files can be longer
+
+Metrics/AbcSize:
+  Max: 30
+  Exclude:
+    - 'registry/**/*'
+
+Metrics/BlockLength:
+  Exclude:
+    - 'spec/**/*'
+    - '**/*.gemspec'
+
+Metrics/CyclomaticComplexity:
+  Max: 10
+
+Metrics/PerceivedComplexity:
+  Max: 10
+
+# Lint
+Lint/AmbiguousBlockAssociation:
+  Enabled: false
+
+Lint/SuppressedException:
+  Exclude:
+    - 'registry/**/*'  # Some error handling is expected
+
+# Performance
+Performance/DeletePrefix:
+  Enabled: true
+
+Performance/DeleteSuffix:
+  Enabled: true
