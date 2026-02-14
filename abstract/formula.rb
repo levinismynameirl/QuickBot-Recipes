@@ -154,6 +154,17 @@ class PluginFormula
     end
 
     # ─────────────────────────────────────────────────────────────────────────
+    # Conflicts
+    # ─────────────────────────────────────────────────────────────────────────
+
+    # Declare conflicts with other plugins or builtin commands
+    def conflicts_with(*names)
+      @conflicts ||= []
+      @conflicts.concat(names.flatten)
+      @conflicts
+    end
+
+    # ─────────────────────────────────────────────────────────────────────────
     # Version Requirements
     # ─────────────────────────────────────────────────────────────────────────
 
@@ -163,10 +174,55 @@ class PluginFormula
       @quickbot_version
     end
 
+    # Maximum QuickBot version tested/supported (for hook plugins)
+    def max_quickbot_version(value = nil)
+      @max_quickbot_version = value if value
+      @max_quickbot_version
+    end
+
     # Minimum Python version
     def python_version(value = nil)
       @python_version = value if value
       @python_version
+    end
+
+    # ─────────────────────────────────────────────────────────────────────────
+    # Version-Specific Releases (Hook Plugins)
+    # ─────────────────────────────────────────────────────────────────────────
+
+    # Map QuickBot versions to specific plugin releases
+    # Used by hook plugins that need tight version coupling
+    #
+    # Example:
+    #   supported_quickbot_versions(
+    #     "0.1.0" => { url: "...", sha256: "...", version: "1.0.0" },
+    #     "0.2.0" => { url: "...", sha256: "...", version: "2.0.0" }
+    #   )
+    def supported_quickbot_versions(mapping = nil)
+      @supported_quickbot_versions = mapping if mapping
+      @supported_quickbot_versions || {}
+    end
+
+    # ─────────────────────────────────────────────────────────────────────────
+    # Development Builds
+    # ─────────────────────────────────────────────────────────────────────────
+
+    # Dev version of the plugin
+    def dev_version(value = nil)
+      @dev_version = value if value
+      @dev_version
+    end
+
+    # Dev download URL
+    def dev_url(value = nil)
+      @dev_url = value if value
+      @dev_url
+    end
+
+    # Dev SHA256
+    def dev_sha256(value = nil)
+      @dev_sha256 = value if value
+      @dev_sha256
     end
 
     # ─────────────────────────────────────────────────────────────────────────
@@ -217,7 +273,13 @@ class PluginFormula
         aliases: aliases,
         hooks: hooks,
         quickbot_version: quickbot_version,
-        python_version: python_version
+        python_version: python_version,
+        conflicts: @conflicts || [],
+        max_quickbot_version: @max_quickbot_version,
+        supported_quickbot_versions: @supported_quickbot_versions || {},
+        dev_version: @dev_version,
+        dev_url: @dev_url,
+        dev_sha256: @dev_sha256
       }
     end
   end
